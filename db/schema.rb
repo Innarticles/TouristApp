@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029092636) do
+ActiveRecord::Schema.define(version: 20141030055649) do
 
   create_table "regions", force: true do |t|
     t.string   "region_name"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20141029092636) do
     t.integer  "region_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "rating"
   end
 
   add_index "sites", ["region_id"], name: "index_sites_on_region_id"
