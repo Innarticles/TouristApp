@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :touristsites
+=======
+  resources :states
+>>>>>>> 6497d6c033f5f5ecee1478416c8301ae22b766f6
 
   resources :users
   resources :regions
