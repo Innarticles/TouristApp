@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-# <<<<<<< HEAD
-# ActiveRecord::Schema.define(version: 20141102215554) do
-# =======
-ActiveRecord::Schema.define(version: 20141102215155) do
-# >>>>>>> 6497d6c033f5f5ecee1478416c8301ae22b766f6
+ActiveRecord::Schema.define(version: 20141102215554) do
 
   create_table "regions", force: true do |t|
     t.string   "region_name"
@@ -41,15 +37,6 @@ ActiveRecord::Schema.define(version: 20141102215155) do
 
   add_index "sites", ["region_id"], name: "index_sites_on_region_id"
 
-
-  create_table "touristsites", force: true do |t|
-    t.string   "name"
-    t.string   "location"
-    t.string   "description"
-    t.string   "picture"
-    t.integer  "rating"
-    t.integer  "state_id"
-
   create_table "states", force: true do |t|
     t.string   "name"
     t.string   "climate"
@@ -60,11 +47,19 @@ ActiveRecord::Schema.define(version: 20141102215155) do
     t.datetime "updated_at"
   end
 
+  create_table "touristsites", force: true do |t|
+    t.string   "name"
+    t.string   "location"
+    t.string   "description"
+    t.string   "picture"
+    t.integer  "rating"
+    t.integer  "state_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   add_index "touristsites", ["state_id"], name: "index_touristsites_on_state_id"
 
-# =======
-# >>>>>>> 6497d6c033f5f5ecee1478416c8301ae22b766f6
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "age"
