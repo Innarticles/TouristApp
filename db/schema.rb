@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102181538) do
+ActiveRecord::Schema.define(version: 20141102215554) do
 
   create_table "regions", force: true do |t|
     t.string   "region_name"
@@ -36,6 +36,19 @@ ActiveRecord::Schema.define(version: 20141102181538) do
   end
 
   add_index "sites", ["region_id"], name: "index_sites_on_region_id"
+
+  create_table "touristsites", force: true do |t|
+    t.string   "name"
+    t.string   "location"
+    t.string   "description"
+    t.string   "picture"
+    t.integer  "rating"
+    t.integer  "state_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "touristsites", ["state_id"], name: "index_touristsites_on_state_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

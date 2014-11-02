@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @touristsite.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @touristsite.location %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @touristsite.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @touristsite.picture %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @touristsite.rating %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @touristsite.state %>
+</p>
+
+<%= link_to 'Edit', edit_touristsite_path(@touristsite) %> |
+<%= link_to 'Back', touristsites_path %>
