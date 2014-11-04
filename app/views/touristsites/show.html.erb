@@ -1,34 +1,54 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @touristsite.name %>
-</p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @touristsite.location %>
-</p>
+ <div class="container">
+      <div class="row">
+         <%= render partial: "states/sidebar_regions"%>
+        <div class="col-md-7 maincontent">
+          <h2 class="text-center" >
+            Tourist Sites
+          </h2>
+                  
+          <div class="row" id="sitedetails">
+            <div>
+              <% @touristsite.picture %>
+              <img src="http://placehold.it/680x300" alt="...">
+            </div>
+            <div class="well">
+              <div class="col-sm-6 col-md-6">
+                <div><i class="fa fa-bookmark"></i> <%= @touristsite.name %></div>
+                <div><i class="fa fa-map-marker"></i> <%= @touristsite.location %></div>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <div><i class="fa fa-money"></i> $$$</div>
+                <div><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i> Ratings: <%= @touristsite.rating %></div>
+              </div>
+            </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @touristsite.description %>
-</p>
+          </div>
 
-<p>
-  <strong>Picture:</strong>
-  <%= @touristsite.picture %>
-</p>
+        
+        </div>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @touristsite.rating %>
-</p>
+        <div class="col-md-3 history">
+          <h2 class="text-center">
+            History
+          </h2>
 
-<p>
-  <strong>State:</strong>
-  <%= @touristsite.state %>
-</p>
+          <div class="panel panel-default">
+          <div class="panel-heading">History </div>
+          <div class="panel-body">
+            <%= @state.info %>
+          </div>
+        </div>
 
-<%= link_to 'Edit', edit_touristsite_path(@touristsite) %> |
-<%= link_to 'Back', touristsites_path %>
+        <div class="panel panel-info">
+        <div class="panel-heading">Language & Culture </div>
+          <div class="panel-body">
+            <%= @state.culture %>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+
+    </div>

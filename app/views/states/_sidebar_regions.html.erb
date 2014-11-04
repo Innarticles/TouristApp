@@ -1,0 +1,13 @@
+<div class="col-md-2 sidebar">
+          <h2 class="text-center">
+            Regions
+          </h2>
+
+          <ul class="col-md-12 listgroup">
+            <% @states.each do |state| %>
+              <li class="list-group-item"><%= link_to "#{state.name }", state  %></li>
+              <% end%>
+          </ul>
+        </div>
+
+        <!-- #link_to "#{state.name }", state_touristsites_path(state) -->

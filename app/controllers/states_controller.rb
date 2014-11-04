@@ -4,16 +4,20 @@ class StatesController < ApplicationController
   # GET /states
   # GET /states.json
   def index
+    @state = State.find(1)
     @states = State.all
   end
 
   # GET /states/1
   # GET /states/1.json
   def show
+    @touristsites = Touristsite.all
+    @states = State.all
   end
 
   # GET /states/new
   def new
+    @states = State.all
     @state = State.new
   end
 
@@ -25,10 +29,10 @@ class StatesController < ApplicationController
   # POST /states.json
   def create
     @state = State.new(state_params)
-
+    
     respond_to do |format|
       if @state.save
-        format.html { redirect_to @state, notice: 'State was successfully created.' }
+        format.html { redirect_to @state, notice: 'Region was successfully created.' }
         format.json { render :show, status: :created, location: @state }
       else
         format.html { render :new }

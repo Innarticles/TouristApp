@@ -1,28 +1,15 @@
 Rails.application.routes.draw do
+ root 'welcome#index'
 
   resources :states do
     resources :touristsites
     end
-
-  
-
-
-  resources :users
-  resources :regions
-  get 'toursite/admin'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # Seeget 'products/:id' => 'catalog#view' how all your routes lay out with "rake routes".
   
   #resources :regions\
 
- root 'welcome#index'
-  get 'regions/' => 'regions#index'
-get 'toursite/view' => 'toursite#view'
-resources :toursite
-
-get 'toursite/new' => 'toursite#new'
-  get 'toursite/admin' => 'toursite#admin'
 
 
   # You can have the root of your site routed with "root"

@@ -2,39 +2,21 @@
 
     <div class="container">
     	<div class="row">
-    		<div class="col-md-2 sidebar">
-    			<h2 class="text-center">
-    				Regions
-    			</h2>
-
-    			<ul class="col-md-12 listgroup">
-    				<li class="list-group-item"><a href="">Greater Accra</a></li>
-    				<li class="list-group-item"><a href="">Eastern</a></li>
-    				<li class="list-group-item"><a href="">Ashanti</a></li>
-    				<li class="list-group-item"><a href="">Central</a></li>
-    				<li class="list-group-item"><a href="">Western</a></li>
-    				<li class="list-group-item"><a href="">Volta </a></li>
-    				<li class="list-group-item"><a href="">Northern</a></li>
-    				<li class="list-group-item"><a href="">Brong Ahafo</a></li>
-    				<li class="list-group-item"><a href="">Upper East</a></li>
-    				<li class="list-group-item"><a href="">Upper West</a></li>
-    				
-    			</ul>
-    		</div>
+    		<%= render partial: "sidebar_regions"%>
     		<div class="col-md-7 maincontent">
     			<h2 class="text-center" >
     				New Region
     			</h2>
-    				
+
 
 						<%= render 'form' %>
 
 						<%= link_to 'Back', states_path %>
-    			<div class="row" id="sitedetails">
+    			<div class="row hide" id="sitedetails">
     				<div>
     					<img src="http://placehold.it/680x300" alt="...">
     				</div>
-    				<div class="well">
+    				<div class="well hide">
     					<div class="col-sm-6 col-md-6">
     						<div><i class="fa fa-bookmark"></i> Tourist Site Name</div>
     						<div><i class="fa fa-map-marker"></i> Tourist Site Location</div>
@@ -83,24 +65,14 @@
     			<div class="panel panel-default">
 				  <div class="panel-heading">History </div>
 				  <div class="panel-body">
-				    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				     <%= @state.info %>
 				  </div>
 				</div>
 
 				<div class="panel panel-info">
 				<div class="panel-heading">Language & Culture </div>
 				  <div class="panel-body">
-				    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				    <%= @state.culture %>
 				  </div>
 				</div>
 			</div>

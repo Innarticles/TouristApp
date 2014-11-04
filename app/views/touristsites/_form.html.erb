@@ -1,4 +1,5 @@
-<%= form_for(@touristsite) do |f| %>
+
+<%= form_for :touristsite,  :url=> {:action => "create" }, :html => { :method => :post } do |f| %>
   <% if @touristsite.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@touristsite.errors.count, "error") %> prohibited this touristsite from being saved:</h2>
