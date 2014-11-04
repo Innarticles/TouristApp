@@ -31,6 +31,8 @@ class TouristsitesController < ApplicationController
   # POST /touristsites
   # POST /touristsites.json
   def create
+    @state = State.find(params[:state_id])
+    @states = State.all
     @touristsite = Touristsite.new(touristsite_params)
  
     respond_to do |format|
@@ -76,6 +78,6 @@ class TouristsitesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def touristsite_params
-      params.require(:touristsite).permit(:name, :location, :description, :picture, :rating, :state_id)
+      params.require(:touristsite).permit(:name, :location, :description, :pic1, :pic2, :pic4, :picture, :rating, :state_id)
     end
 end

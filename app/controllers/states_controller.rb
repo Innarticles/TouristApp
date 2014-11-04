@@ -4,7 +4,7 @@ class StatesController < ApplicationController
   # GET /states
   # GET /states.json
   def index
-    @state = State.find(1)
+    @state = State.first
     @states = State.all
   end
 

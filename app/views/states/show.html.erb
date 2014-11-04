@@ -38,7 +38,8 @@
             <% @selectedSites.each do |site| %>
           <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-              <img src="http://placehold.it/400x400" alt="...">
+            <%= image_tag(site.picture, size: "30x40") %>
+              <!-- <img src="http://placehold.it/400x400" alt="..."> -->
               <div class="caption">
                 <h3> <%= link_to "#{site.name }", state_touristsite_path(site.id, @state.id)%></h3>
               </div>
